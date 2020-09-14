@@ -1,4 +1,5 @@
 <script>
+	import Modal from './Modal.svelte';
 	let firstName = "Vincent";
 	let lastName = "Kim";
 	
@@ -76,14 +77,7 @@
 	let num = 5;
 </script>
 
-{#if num > 20}
-	<p>Greater than 20</p>
-{:else if num > 5}
-	<p>Greater than 5</p>
-{:else}
-	<p>Not greater than 5</p> 
-{/if}
-
+<Modal />
 <main>
 	<!-- Output full-name here. -->
 	<p style="color: {beltColour}">{fullName} - has {beltColour} belt</p>
@@ -151,3 +145,11 @@
 	<p>There are no people to show...</p>
 	{/each}
 </main>
+
+{#if num > 20}
+	<p>Greater than 20</p>
+{:else if num > 5}
+	<p>Greater than 5</p>
+{:else}
+	<p>Not greater than 5</p> 
+{/if}
